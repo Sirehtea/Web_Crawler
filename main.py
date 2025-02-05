@@ -7,7 +7,7 @@ from urllib.parse import urljoin
 
 print("bv: \"https://www.google.com/\"")
 URL = input("Website die je wilt doorzoeken: ")
-DIEPTE = input("Kies de maximale diepte")
+DIEPTE = int(input("Kies de maximale diepte: "))
 
 class WordCounter:
     def __init__(self):
@@ -63,7 +63,7 @@ async def async_main():
     word_counter = WordCounter()
     crawler = Crawler(set(), start_url, DIEPTE, word_counter)
 
-    await crawler.crawl(start_url, 2)
+    await crawler.crawl(start_url, DIEPTE)
 
     while crawler.background_tasks:
         await asyncio.gather(*crawler.background_tasks)
