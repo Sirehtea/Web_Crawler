@@ -6,8 +6,8 @@ import json
 from urllib.parse import urljoin
 
 print("bv: \"https://www.google.com/\"")
-URL = input("website die je wilt doorzoeken: ")
-DIEPTE = input("")
+URL = input("Website die je wilt doorzoeken: ")
+DIEPTE = input("Kies de maximale diepte")
 
 class WordCounter:
     def __init__(self):
